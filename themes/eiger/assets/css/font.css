@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "futura-medium";
+    src: url('../../assets/futura-font/Futura-Medium-01.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "futura-bold";
+    src: url('../../assets/futura-font/Futura-Bold-03.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "avenir-medium";
+    src: url('../../assets/futura-font/AvenirLTStd-Medium.otf') format('truetype');
+}
+
+@font-face {
+    font-family: "avenir-light";
+    src: url('../../assets/futura-font/avenirltstd-light.otf') format('truetype');
+}
