@@ -207,6 +207,19 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- partial:index.partial.html -->
+<div class="ismap"><a href="#map">Map It</a></div>
+	</br>
+	<div id="map-container" class="mapit" >
+		<div id="map-canvas" data-geocode="36.885387,-76.306421"></div>
+		<p>There is map here</p>
+	</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'></script>
+<script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/dist/script.js"></script>
 		
         <!-- end store finder -->   
 		<?php endwhile; endif; ?>

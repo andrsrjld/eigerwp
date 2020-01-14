@@ -58,6 +58,7 @@
         <!-- responsive css -->
         <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/responsive.css">
         <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/custom.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/dist/style.css">
 		
         <!--[if IE]>
             <script src="js/html5shiv.js"></script>

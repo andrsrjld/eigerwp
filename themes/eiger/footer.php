@@ -179,6 +179,7 @@
         <script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/instafeed.min.js"></script>
         <!-- retina -->
         <script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/retina.min.js"></script>
+        <script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/dist/script.js"></script>
         <!-- revolution -->
         <!-- <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
         <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script> -->
