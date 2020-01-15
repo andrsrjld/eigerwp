@@ -199,6 +199,7 @@
         <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
         <script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
         <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script> -->
+
     </body>
 </html>
 <?php endwhile; endif; ?>

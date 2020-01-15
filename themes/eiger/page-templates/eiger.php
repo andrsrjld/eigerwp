@@ -176,52 +176,53 @@
                         <h4>Store Finder</h4>
                         
                         <div class="col-lg-12 wrap-sf-address">
+
+                        <?php $id=1; ?>
+
                         <?php if ( have_rows( 'eiger_store_location' ) ) : ?>
 	                                <?php while ( have_rows( 'eiger_store_location' ) ) : the_row(); ?>
                                     <?php $map = get_sub_field( 'store_lt_ld' ); ?>
-                            <div href="#map" class="col-lg-12 sf-content">
+                                    
+                            <div class="col-lg-12 sf-content">
                            
                                 <div class="col-lg-2">
                                     <img src="<?php bloginfo('template_url');?>/assets/img/ic-location.png">
                                 </div>
-                                <div class="col-lg-10">
+                                <div class="col-lg-10 ismap">
                                 
-
-                                    <h6><?php the_sub_field( 'city' ); ?></h6>
+                                <a href="#map<?php echo $id;?>" onClick="changeMap(<?php the_sub_field( 'latitude' ); ?>, <?php the_sub_field( 'longitude' ); ?>);">
+                                    <h6 style="margin: 0 0 0px;"><?php the_sub_field( 'city' ); ?></h6>
                                     <p><?php the_sub_field( 'store_name' ); ?></p>
+                                </a>
                                     
                                 </div>
                             </div>
-                            <?php endwhile; ?>
+                            <?php $id++; endwhile; ?>
                                 <?php else : ?>
                                 	<?php // no rows found ?>
                                 <?php endif; ?> 
+                            
                         </div>
                     </div>
-                    <div class="col-lg-7">
-                        <div class="col-lg-12 wrap-map" style="padding:0">
-                        <div class="mapouter"><div id="map" class="gmap_canvas">
-                            <?php echo $map ?>
-                        </div>
-                    </div>
+
+<div id="contentMap">
+
+
+
+</div>
+
+
+
+
                 </div>
             </div>
         </div>
+        <!-- end store finder -->   
 
-
-        <!-- partial:index.partial.html -->
-<div class="ismap"><a href="#map">Map It</a></div>
-	</br>
-	<div id="map-container" class="mapit" >
-		<div id="map-canvas" data-geocode="36.885387,-76.306421"></div>
-		<p>There is map here</p>
-	</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'></script>
 <script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/dist/script.js"></script>
-		
-        <!-- end store finder -->   
+
 		<?php endwhile; endif; ?>
 <?php get_footer();?>
 

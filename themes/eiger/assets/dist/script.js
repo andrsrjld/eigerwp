@@ -2,7 +2,8 @@ $(document).ready(function() {
 	// var test = $('#map-container').hasClass('mapit');
 	var test = window.google != undefined;
 
-	$('.ismap').click(function() {
+
+	
 		console.log("Map is clicked");
 		$gmap = true;
 		$mapit = false;
@@ -26,7 +27,8 @@ $(document).ready(function() {
 		    }
 		});
 		console.log("I should run before YepNope");
-	});
+
+	
 
 });
 
@@ -54,4 +56,18 @@ function initMap() {
 
 	// To add the marker to the map, call setMap();
 	marker.setMap(map);
+}
+
+$(document).ready(function(){
+	document.getElementById("contentMap").innerHTML = '<div class="col-lg-7 mapit"><div id=map-container class="col-lg-12 wrap-map" style="padding:0"><div class="mapouter"><div id="map" class="gmap_canvas"><div id="map-canvas" data-geocode="36.885387,-76.306421"</div></div></div>';
+	
+});
+	
+	
+
+
+function changeMap(latitude, longitude) {
+	document.getElementById("contentMap").innerHTML = '';
+	document.getElementById("contentMap").innerHTML = '<div class="col-lg-7 mapit"><div id=map-container class="col-lg-12 wrap-map" style="padding:0"><div class="mapouter"><div id="map" class="gmap_canvas"><div id="map-canvas" data-geocode="'+latitude+','+longitude+'"</div></div></div>';
+	initMap();
 }
